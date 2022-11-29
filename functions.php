@@ -21,6 +21,7 @@ require_once($template_diretorio . "/endpoints/cliente_delete.php");
 
 require_once($template_diretorio . "/endpoints/contato_post.php");
 require_once($template_diretorio . "/endpoints/contato_get.php");
+require_once($template_diretorio . "/endpoints/contato_delete.php");
 
 
 function get_cliente_id_by_slug($slug) {

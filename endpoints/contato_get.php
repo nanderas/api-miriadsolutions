@@ -22,17 +22,9 @@ function contato_scheme($slug) {
       "id" => $slug, 
       "contato_fotos" => $images_array,
       "contato_email" => $post_meta['contato_email'][0],
-      "contato_cnpj" => $post_meta['contato_cnpj'][0],
+      "contato_cliente" => $post_meta['contato_cliente'][0],
       "contato_nome" => $post_meta['contato_nome'][0],
-      "contato_url" => $post_meta['contato_url'][0],
-      "contato_cep" => $post_meta['contato_cep'][0],
-      "contato_rua" => $post_meta['contato_rua'][0],
-      "contato_numero" => $post_meta['contato_numero'][0],
-      "contato_complemento" => $post_meta['contato_complemento'][0],
-      "contato_bairro" => $post_meta['contato_bairro'][0],
-      "contato_cidade" => $post_meta['contato_cidade'][0],
-      "contato_estado" => $post_meta['contato_estado'][0],
-      "usuario_id" => $post_meta['usuario_id'][0],
+      "contato_cargo" => $post_meta['contato_cargo'][0],
     );
 
   } else {
