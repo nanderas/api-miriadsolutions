@@ -24,8 +24,8 @@ require_once($template_diretorio . "/endpoints/contato_get.php");
 require_once($template_diretorio . "/endpoints/contato_delete.php");
 
 require_once($template_diretorio . "/endpoints/oportunidade_post.php");
-//require_once($template_diretorio . "/endpoints/oportunidade_get.php");
-//require_once($template_diretorio . "/endpoints/oportunidade_delete.php");
+require_once($template_diretorio . "/endpoints/oportunidade_get.php");
+require_once($template_diretorio . "/endpoints/oportunidade_delete.php");
 
 
 function get_cliente_id_by_slug($slug) {
@@ -43,6 +43,17 @@ function get_contato_id_by_slug($slug) {
   $query = new WP_Query(array(
     'name' => $slug,
     'post_type' => 'contato',
+    'numberposts' => 1,
+    'fields' => 'ids'
+  ));
+  $posts = $query->get_posts();
+  return array_shift($posts);
+}
+
+function get_oportunidade_id_by_slug($slug) {
+  $query = new WP_Query(array(
+    'name' => $slug,
+    'post_type' => 'oportunidade',
     'numberposts' => 1,
     'fields' => 'ids'
   ));

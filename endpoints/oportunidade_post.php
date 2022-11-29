@@ -17,7 +17,7 @@ function api_oportunidade_post($request) {
       $response = array(
         'post_author' => $user_id,
         'post_type' => 'oportunidade',
-        'post_title' => $oportunidade_descricao,
+        'post_title' => $oportunidade_descricao . ' - ' . $oportunidade_cliente,
         'post_status' => 'publish',
         'files' => $files,
         'meta_input' => array(
